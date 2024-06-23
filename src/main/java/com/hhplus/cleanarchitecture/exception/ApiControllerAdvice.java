@@ -1,4 +1,4 @@
-package com.hhplus.cleanarchitecture;
+package com.hhplus.cleanarchitecture.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
