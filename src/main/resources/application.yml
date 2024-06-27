@@ -5,8 +5,8 @@ spring:
     driver-class-name: org.h2.Driver
     url: 'jdbc:h2:mem:test' #IN-Memory Mode
     #url: 'jdbc:h2:~/test'  #Embedded Mode
-    username: admin
-    password: admin#123
+    username: sa
+    password:
 
   h2:
     console:            #H2 DB? ??? ??? ? ?? ??
@@ -16,12 +16,19 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create  #DB ??? ??
+      ddl-auto: update  #DB ??? ??
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
         format_sql: true  #?? ?? ??(??)
         show_sql: true    #?? ?? ??
+  sql:
+    init:
+      mode: always
 
+logging:
+  level:
+    root: DEBUG
+#      springframework: DEBUG
 server:
   port: 80
