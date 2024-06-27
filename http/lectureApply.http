@@ -1,0 +1,8 @@
+### 특강 신청
+POST localhost:80/lecture/apply
+Content-Type: application/json
+
+{
+  "lectureScheduleId": 1,
+  "userId": 1
+}
